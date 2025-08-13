@@ -409,7 +409,8 @@ func TestRedirectTemplating(t *testing.T) {
 	gotURL, err := resp.Location()
 	if err != nil {
 		t.Fatalf("error getting Location header from response: %v", err)
-	}
+	} go test ./controllers
+
 	if gotURL.String() != expectedURL {
 		t.Fatalf("invalid redirect received. expected %s got %s", expectedURL, gotURL)
 	}
